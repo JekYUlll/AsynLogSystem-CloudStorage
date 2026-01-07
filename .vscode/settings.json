@@ -1,0 +1,10 @@
+{
+  "cmake.debugConfig": {
+    "type": "lldb",
+    "request": "launch",
+    "name": "CMake (LLDB)",
+    "program": "${command:cmake.launchTargetPath}",
+    "args": [],
+    "cwd": "${workspaceFolder}"
+  }
+}
