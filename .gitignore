@@ -1,6 +1,8 @@
 build*/
 .cache/
 .mcp/
+logs/
+*.log
 # .vscode/
 
 # Prerequisites

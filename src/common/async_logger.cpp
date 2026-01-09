@@ -38,9 +38,13 @@ std::string AsyncLogger::Format(LogLevel level, const std::string& msg) {
     auto now = std::chrono::system_clock::now();
     auto tt = std::chrono::system_clock::to_time_t(now);
     std::tm tm{};
+    #ifdef _WIN32
     localtime_s(&tm, &tt);
+    #else
+    localtime_r(&tt, &tm);
+    #endif
     std::ostringstream os;
-    os << std::put_time(&tm, "%F %T") << " [" << static_cast<int>(level) << "] " << msg << '\n';
+    os << std::put_time(&tm, "%F %T") << " [" << ToString(level) << "] " << msg << '\n';
     return os.str();
 }
 

@@ -10,6 +10,16 @@
 
 enum class LogLevel { kDebug, kInfo, kWarn, kError };
 
+constexpr inline const char* ToString(LogLevel level) {
+    switch (level) {
+        case LogLevel::kDebug: return "DEBUG";
+        case LogLevel::kInfo:  return "INFO";
+        case LogLevel::kWarn:  return "WARN";
+        case LogLevel::kError: return "ERROR";
+        default:              return "UNKNOWN";
+    }
+}
+
 class AsyncLogger {
 public:
     AsyncLogger();
