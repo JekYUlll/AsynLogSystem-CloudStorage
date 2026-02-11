@@ -1,1 +1,5 @@
 2026-01-09 19:06:21 [INFO] Server starting (HTTP/gRPC TODO)
+2026-01-20 07:21:19 [INFO] Put hello.txt
+2026-01-20 07:21:19 [INFO] Get hello.txt
+2026-01-20 07:21:19 [INFO] Delete hello.txt
+2026-01-20 07:21:19 [INFO] Client done
